@@ -47,7 +47,7 @@ class SandwichMachine:
         
         while True:
             # asks for user input
-            self.user_input = str(input("What would you like? (small/ medium/ large/ off/ report) : "))
+            self.user_input = str(input("What would you like? (small / medium / large / off / report) : "))
             
             # checks validity
             if self.user_input not in ["small", "medium", "large", "off", "report"]:
