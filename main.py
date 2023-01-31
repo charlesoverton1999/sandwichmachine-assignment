@@ -55,23 +55,23 @@ class SandwichMachine:
                 continue
             
             # choices
-            if self.user_input == "off": # A. if turn off the machine
+            if self.user_input == "off": #turns off the machine when user selects this
                 return
-            elif self.user_input == "report": # B. show resource report
+            elif self.user_input == "report": #shows resource report when user selects this
                 self.report_resources()
                 continue
             
-            # C. process order
+            #processes the order
             ingredients = self.recipes[self.user_input]["ingredients"]
-            # if not enough resources
+            #selects if there is not enough resources
             resource_available = self.check_resources(ingredients)
             if not resource_available: continue
             
-            # get coin and cost 
+            #gets the coin and the cost
             coins = self.process_coins()
             cost = self.recipes[self.user_input]["cost"]
             
-             # check if sufficient coins
+             #checks to see if there are sufficient coins
             transaction = self.transaction_result(coins, cost)
             if not transaction: continue
             
