@@ -24,7 +24,6 @@ recipes = {
         "cost": 5.5,
     }
 }
-
 resources = {
     "bread": 12,  ## slice
     "ham": 18,  ## slice
